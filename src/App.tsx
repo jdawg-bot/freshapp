@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import type { Schema } from "../amplify/data/resource";
 import { useAuthenticator } from '@aws-amplify/ui-react';
 import { generateClient } from "aws-amplify/data";
+import { ImageUploader } from './components/Imageuploader';
+
 
 const client = generateClient<Schema>();
 
@@ -42,6 +44,11 @@ function App() {
           Review next step of this tutorial.
         </a>
       </div>
+      <div>
+      <h1>ImageUploader</h1>
+      <ImageUploader />
+    </div>
+
       <button onClick={signOut}>Sign out</button>  
     </main>
   );

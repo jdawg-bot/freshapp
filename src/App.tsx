@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import type { Schema } from "../amplify/data/resource";
 import { useAuthenticator } from '@aws-amplify/ui-react';
 import { generateClient } from "aws-amplify/data";
-import { ImageUploader } from './components/Imageuploader';
+import { ImageUploader } from './components/imageuploader';
 
 
 const client = generateClient<Schema>();

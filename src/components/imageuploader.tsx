@@ -14,7 +14,7 @@ export const ImageUploader = () => {
 
     try {
       // Construct the key so that the file is stored in the uploads folder.
-      const path = `anthony-object-detection-bucket/uploads/${file.name}`;
+      const path = `uploads/${file.name}`;
 
       // Upload the file using uploadData.
       // The bucket is specified by its name, which is 'anthony-object-detection-bucket'.

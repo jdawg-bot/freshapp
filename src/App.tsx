@@ -3,6 +3,7 @@
 import { useAuthenticator } from '@aws-amplify/ui-react';
 //import { generateClient } from "aws-amplify/data";
 import { ImageUploader } from './components/imageuploader';
+import { FileUploader } from '@aws-amplify/ui-react-storage';
 
 
 //const client = generateClient<Schema>();
@@ -22,6 +23,15 @@ function App() {
       <div>
       <h1>ImageUploader</h1>
       <ImageUploader />
+      <FileUploader
+      acceptedFileTypes={['image/*']}
+      bucket={{
+        bucketName: 'anthony-object-detection-bucket',
+        region: 'us-east-1',
+      }}
+      path="uploads/"
+      maxFileCount={1}
+    />
     </div>
     <br />
       <button onClick={signOut}>Sign out</button>  
